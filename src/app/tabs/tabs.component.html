@@ -1,0 +1,10 @@
+<p>tabs works!</p>
+<ul class="tabs-container">
+    <li (click)="tabsLinks('Personal details')" [class.isactive]="isactive=='Personal details'" class="tab-link">Personal details</li>
+    <li (click)="tabsLinks('Account details')" [class.isactive]="isactive=='Account details'" class="tab-link">Account details</li>
+    <li (click)="tabsLinks('Bank details')" [class.isactive]="isactive=='Bank details'" class="tab-link">Bank details</li>
+</ul>
+
+<div *ngIf="isactive==='Personal details'">Personal details</div>
+<div *ngIf="isactive==='Account details'">Account details</div>
+<div *ngIf="isactive==='Bank details'">Bank details</div>

@@ -7,11 +7,16 @@ import { Component } from '@angular/core';
 })
 export class CoursesComponent {
 isActive=false;
+
+activeTab:string='Home';
 email:any="myexample@gmail.com";
 constructor(){
   
 }
 onKeyUp(){
   console.log(this.email);
+}
+onTabclick(tab:any){
+this.activeTab=tab;
 }
 }

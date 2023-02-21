@@ -1,3 +1,12 @@
 <p>courses works!</p>
 <input [(ngModel)]="email" (keyup.enter)="onKeyUp()"/>
+<div class="tabs-container">
+    <li (click)="onTabclick('Home')" [class.active]="activeTab=='Home'" class="tab-link">Home</li>
+    <li (click)="onTabclick('Aboutus')" [class.active]="activeTab=='Aboutus'" class="tab-link">Aboutus</li>
+    <li (click)="onTabclick('Careers')" [class.active]="activeTab=='Careers'" class="tab-link">Careers</li>
+</div>
+<div *ngIf="activeTab=='Home'">Home</div>
+<div *ngIf="activeTab=='Aboutus'">Aboutus</div>
+<div *ngIf="activeTab=='Careers'">Careers
+</div>
 
