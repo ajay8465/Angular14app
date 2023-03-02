@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Heading</div>
+    <div class="panel-body">Body</div>
+</div>  
+<h2 *ngIf="namespace"; else #elseBlock>Ajay</h2>
+
+<ng-template  #elseBlock>
+<h2>Hide the code</h2>
+</ng-template>
+<div *ngIf="courses.length>0">Hello courses</div>
+<div *ngIf="courses.length==0">No courses yet</div>
+<div [hidden]="courses.length==0">
+list of courses
+</div>
+<div [hidden]="courses.length>0">
+NoCourses yet
+</div>

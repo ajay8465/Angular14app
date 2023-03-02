@@ -1,4 +1,4 @@
-<p>courses works!</p>
+<!--<p>courses works!</p>
 <input [(ngModel)]="email" (keyup.enter)="onKeyUp()"/>
 <div class="tabs-container">
     <li (click)="onTabclick('Home')" [class.active]="activeTab=='Home'" class="tab-link">Home</li>
@@ -8,5 +8,16 @@
 <div *ngIf="activeTab=='Home'">Home</div>
 <div *ngIf="activeTab=='Aboutus'">Aboutus</div>
 <div *ngIf="activeTab=='Careers'">Careers
+</div>-->
+<li class="active"><a href="">Map View</a></li>
+<li><a href>List View</a></li>
+<div>
+<div>Map view content</div>
+<div>List view content</div>
 </div>
+<button (click)="onLoading()">LoadCourses</button>
+<ul><li *ngFor="let courses of courses; trackBy:trackCourse ">{{courses.name}}
+</li>
+</ul>
+
 
