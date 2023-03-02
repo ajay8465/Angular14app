@@ -9,7 +9,7 @@
 <div *ngIf="activeTab=='Aboutus'">Aboutus</div>
 <div *ngIf="activeTab=='Careers'">Careers
 </div>-->
-<li class="active"><a href="">Map View</a></li>
+<!--<li class="active"><a href="">Map View</a></li>
 <li><a href>List View</a></li>
 <div>
 <div>Map view content</div>
@@ -18,6 +18,13 @@
 <button (click)="onLoading()">LoadCourses</button>
 <ul><li *ngFor="let courses of courses; trackBy:trackCourse ">{{courses.name}}
 </li>
-</ul>
+</ul>-->
+
+<div *ngIf="courses.length>0; else Nocourses">
+listofcourses
+</div>
+<ng-template>
+    NoCourses
+</ng-template>
 
 
